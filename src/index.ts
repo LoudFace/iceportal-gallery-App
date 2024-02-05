@@ -12,7 +12,7 @@ const site_id = "6537a317fa220b9995fad407";
 const token =
   "a559fcd350773138595015addce6cb82d87cb673268d97edf92379b5694ccf42";
 
-const pageNo = 4;
+const pageNo = 5;
 
 document.getElementById("lorem").onsubmit = async (event) => {
   event.preventDefault();
@@ -229,10 +229,10 @@ async function fetchDataWithOAuth2(access_token) {
         };
 
         //   activating the return create the cms items
-        // return fetch(
-        //   `https://api.webflow.com/v2/collections/${imageCollection_id}/items?access_token=${token}`,
-        //   options
-        // );
+        return fetch(
+          `https://api.webflow.com/v2/collections/${imageCollection_id}/items?access_token=${token}`,
+          options
+        );
       } else {
         console.log(
           `item with listingID ${listingID} already exists in the cms`
